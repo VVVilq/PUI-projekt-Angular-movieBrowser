@@ -1,0 +1,77 @@
+nav#navigacja{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    z-index: 998;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    
+    ul{
+      text-align: center;
+      list-style-type: none;
+      
+      
+      li {
+        display: inline;   
+        vertical-align: middle;
+        line-height: 30px;       
+        padding: 0px 10px ;   
+        font-family: "Fira Sans", sans-serif;
+        font-size: 17px;
+        margin-left:auto;
+        margin-right:auto;
+        
+        a#nav-options {
+          color: #f2f2f2;
+          text-decoration: none;
+          padding: 10px;
+          
+          &:hover {
+            background-color: rgb(133, 42, 42);
+          }
+        }
+        
+        a#picture-link{
+          margin:0px 10px 0px 10px;
+            float: right; 
+          img{   
+              
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            
+          }
+        }
+          
+
+          
+        
+        
+        
+        
+        button{   
+          float: right;
+          color:white;
+          background-color: black;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition-duration: 0.4s;
+          &:hover {
+            background-color: white;
+            color:black;
+          }
+  
+        
+      }
+      
+      }
+
+
+    }
+
+    
+}

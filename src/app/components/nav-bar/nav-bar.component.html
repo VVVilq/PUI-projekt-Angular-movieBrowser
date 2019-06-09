@@ -1,0 +1,33 @@
+
+  <nav *ngIf="user" id="navigacja">
+    <ul>
+      <li>
+          <a id = "nav-options" class="nav-link" routerLink="/browse">Browse</a>
+      </li>
+      <li>
+          <a id="nav-options" class="nav-link" routerLink="/about">About </a>
+      </li>
+      <li>
+        <a id="picture-link" class="nav-link" routerLink="/user"><img src={{user.photoURL}} alt=""></a>      
+      </li>
+      <li>
+        <button (click)="logOut()">Log out</button>
+      </li>    
+    </ul>
+
+
+  </nav>
+
+
+  
+    <nav *ngIf="!user" id="navigacja">
+      <ul>
+        <li>
+            <a id="nav-options" class="nav-link" routerLink="/login">Log In</a>
+        </li>
+        <li>
+            <a id="nav-options" class="nav-link" routerLink="/registration">Sign In</a>
+        </li>
+      </ul>
+    </nav>
+  

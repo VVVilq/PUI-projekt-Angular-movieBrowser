@@ -1,0 +1,15 @@
+<div id="detailcontainer">
+  <div *ngIf="item$">
+    <h4>{{item$.Title}}</h4>
+    <img src={{item$.Poster}} alt="Poster" />
+    <p>Plot: {{item$.Plot}}</p>
+    <p>IMDb rating: {{item$.imdbRating}}</p>
+    <p>IMDb votes: {{item$.imdbVotes}}</p>
+    <p>Released: {{item$.Released}}</p>
+    <p>Runtime: {{item$.Runtime}}</p>
+    <p>Genre: {{item$.Genre}}</p>
+    <p>Awards: {{item$.Awards}}</p>
+    <p>Director: {{item$.Director}}</p>
+    <p>Writer: {{item$.Writer}}</p>
+  </div>
+</div>

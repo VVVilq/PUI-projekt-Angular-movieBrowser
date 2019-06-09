@@ -1,0 +1,22 @@
+<div id="container">
+  <form [formGroup]="reactiveForm">
+      <label htmlFor="title">search your show in the Web</label>
+      <input type="text" id="title" class="form-control" formControlName="title" />
+      <button id="search" [disabled]="reactiveForm.invalid" (click)="searchShow()">Search</button>
+  </form>
+ <div *ngIf = "items$">
+  <div  *ngFor="let item of items$.Search">  
+    <div id="elem">
+        <a [routerLink]="['/movies/',item.imdbID]">
+            {{item.Title}}
+        </a>                                                                         
+        <img src={{item.Poster}} alt=""/>
+
+    </div>
+ </div>
+  
+</div>
+  <button id="back" [disabled]="!showSpecified" (click)="lastPage()">Previous Page</button>
+  <button id="next" [disabled]="!showSpecified" (click)="nextPage()">Next Page</button>
+  <div *ngIf="exceptionToDisplay"><p>{{exceptionToDisplay}}</p></div>
+</div>

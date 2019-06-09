@@ -1,0 +1,11 @@
+<div id="registration">
+  <form [formGroup]="reactiveForm">
+      <label htmlFor="email">Email:</label>
+      <input type="email" id="email" class="form-control" formControlName="email" />
+      <label htmlFor="password">Password:</label>
+      <input type="password" id="password" class="form-control" formControlName="password" />
+      <button type="button" (click)="logInUser()" [disabled]="reactiveForm.invalid">Log In</button>
+  </form>
+  <a routerLink="/recovery" routerLinkActive="active">forgot your password?</a>
+  <div *ngIf="exception"><p>{{exception}}</p></div>
+</div>
