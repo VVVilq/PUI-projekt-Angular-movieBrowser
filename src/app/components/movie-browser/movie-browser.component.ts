@@ -28,7 +28,7 @@ export class MovieBrowserComponent implements OnInit {
     })
   }
   getAll() {
-    this.service.getAll(this.reactiveForm.get("title").value, this.resultPage).subscribe(response => {
+    this.service.getAll(this.reactiveForm.get("title").value.trim(), this.resultPage).subscribe(response => {
       this.items$ = response;
     });
   }

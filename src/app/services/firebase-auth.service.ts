@@ -43,6 +43,18 @@ export class FirebaseAuthService {
   }
 
   retrievePassword(emailAddress){
-    return this.fireAuth.auth.sendPasswordResetEmail(emailAddress);
+    return this.fireAuth.auth.sendPasswordResetEmail(emailAddress);  
+  }
+
+  changePassword(password){
+    return this.fireAuth.auth.currentUser.updatePassword(password);
+  }
+
+  changeEmail(email){
+    return this.fireAuth.auth.currentUser.updateEmail(email);
+  }
+
+  changeAvatar(avatarURL){
+    return this.fireAuth.auth.currentUser.updateProfile({photoURL: avatarURL});
   }
 }

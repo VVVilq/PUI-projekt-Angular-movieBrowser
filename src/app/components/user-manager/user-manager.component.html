@@ -1,3 +1,19 @@
-<p>
-  user-manager works!
-</p>
+<div id="detailcontainer">
+  <div *ngIf="user">
+    <h4>Welcome {{user.displayName}}</h4>
+    <img src={{user.photoURL}} alt="" />
+    <p>Email: {{user.email}}</p>
+
+    
+    <input (keyup)="onKeyAvatar($event)" placeholder="Type URL" value={{this.photo}}>
+    <button type="button" (click) = "changeAvatar()">Change Avatar</button>
+
+    <input (keyup)="onKeyEmail($event)" placeholder="Type new Email" value={{this.email}}>
+    <button type="button" (click) = "changeEmail()">Change Email</button>
+
+    <input (keyup)="onKeyPassword($event)" placeholder="Type new Password" value={{this.password}}>
+    <button type="button" (click)="changePassword()">Change Password</button>
+  </div>
+
+  <div *ngIf="exception"><p id="error">{{exception}}</p></div>
+</div>
