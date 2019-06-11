@@ -16,9 +16,7 @@ export class ToWatchComponent implements OnInit {
   ngOnInit() {
     this.dataService.getData(this.userAuth.user.uid).then((snapshot) =>{   
       snapshot.forEach((snap)=>{  
-        console.log(snap.val());
         this.items.push(snap.val());
-        console.log(this.items);
       });
     });
   }

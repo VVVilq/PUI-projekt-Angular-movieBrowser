@@ -1,6 +1,6 @@
 <div id="registration">
   <form [formGroup]="reactiveForm">
-    <label htmlFor="login">Login:</label>
+    <label htmlFor="login">Login(optional):</label>
     <input type="text" id="login" class="form-control" formControlName="login" />
     <label htmlFor="email">Email:</label>
     <input type="email" id="email" class="form-control" formControlName="email" />
@@ -8,5 +8,5 @@
     <input type="password" id="password" class="form-control" formControlName="password" />
     <button type="button" (click)="registerUser()" [disabled]="reactiveForm.invalid">Log In</button>
 </form> 
-  <div *ngIf="exception"><p>{{exception}}</p></div>
+  <div *ngIf="exception"><p id="error">{{exception}}</p></div>
 </div>

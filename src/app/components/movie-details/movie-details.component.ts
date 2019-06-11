@@ -21,9 +21,7 @@ export class MovieDetailsComponent implements OnInit {
     this.getValueWithAsync().then((id) => {
       this.fireData.existInDatabase(this.authFire.user.uid, id).then((snapshot)=>{
         if (snapshot.exists()){
-          console.log(snapshot.val())
           this.inWatchlist= true
-          console.log(this.inWatchlist)
         }       
       }) 
     })
