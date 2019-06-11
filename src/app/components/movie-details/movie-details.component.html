@@ -2,6 +2,7 @@
   <div *ngIf="item$">
     <h4>{{item$.Title}}</h4>
     <img src={{item$.Poster}} alt="Poster" />
+    <button *ngIf="!inWatchlist" type="button" (click)="addToWatchlist()" >Add To Watchlist</button>
     <p>Plot: {{item$.Plot}}</p>
     <p>IMDb rating: {{item$.imdbRating}}</p>
     <p>IMDb votes: {{item$.imdbVotes}}</p>

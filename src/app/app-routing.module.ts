@@ -8,6 +8,7 @@ import { MovieBrowserComponent } from './components/movie-browser/movie-browser.
 import { AuthGuardService } from './services/auth-guard.service';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { UserManagerComponent } from './components/user-manager/user-manager.component';
+import { ToWatchComponent } from './components/to-watch/to-watch.component';
 
 
 
@@ -31,6 +32,12 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserManagerComponent,
+    canActivate: [AuthGuardService],
+  
+  },
+  {
+    path: 'watchlist',
+    component: ToWatchComponent,
     canActivate: [AuthGuardService],
   
   },

@@ -18,6 +18,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { MovieService } from './services/movie.service';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { UserManagerComponent } from './components/user-manager/user-manager.component';
+import { ToWatchComponent } from './components/to-watch/to-watch.component';
+import { FirebaseDataService } from './services/firebase-data.service';
+import { AngularFireDatabaseModule   } from 'angularfire2/database';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,8 @@ import { UserManagerComponent } from './components/user-manager/user-manager.com
     AboutComponent,
     MovieBrowserComponent,
     MovieDetailsComponent,
-    UserManagerComponent
+    UserManagerComponent,
+    ToWatchComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -36,9 +40,10 @@ import { UserManagerComponent } from './components/user-manager/user-manager.com
     AppRoutingModule,
     AngularFireAuthModule,
     ReactiveFormsModule,
+    AngularFireDatabaseModule ,
     HttpClientModule
   ],
-  providers: [AuthGuardService,FirebaseAuthService,MovieService],
+  providers: [AuthGuardService,FirebaseAuthService,MovieService,FirebaseDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
